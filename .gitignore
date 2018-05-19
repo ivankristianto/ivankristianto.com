@@ -5,6 +5,7 @@ vendor
 composer.lock
 phpunit.xml
 .idea
+debug.log
 
 # Project Files
 dist

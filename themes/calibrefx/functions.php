@@ -106,8 +106,6 @@ function calibrefx_initialize_other() {
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
 
-	//remove unneccesary headers
-	remove_action( 'wp_head', 'wp_generator' );
 }
 add_action( 'after_setup_theme', 'calibrefx_initialize_other', 99 );
 
@@ -143,28 +141,6 @@ function childfx_load_library( $library_path ){
 
 	return $library_path;
 }
-
-
-
-/**
- * Enable GZip Compression
- */
-function calibrefx_gzip_compression() {
-	if ( ! current_theme_supports( 'calibrefx-preformance' ) OR is_admin() ){
-		return false;
-	}
-	
-	// can't use zlib.output_compression and ob_gzhandler at the same time
-	if ( ( 'On' == ini_get( 'zlib.output_compression' ) || ini_get( 'zlib.output_compression_level' ) > 0 ) OR 'ob_gzhandler' == ini_get( 'output_handler' ) ) {
-		return false;
-	}
-
-	if ( extension_loaded( 'zlib' ) ) {
-		ob_end_clean();
-		ob_start( 'ob_gzhandler' );
-	}
-}
-add_action( 'init', 'calibrefx_gzip_compression' );
 
 if ( ! function_exists( 'calibrefx_fonts_url' ) ) :
 /**
