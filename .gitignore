@@ -30,6 +30,9 @@ Thumbs.db
 Desktop.ini
 
 # Some plugins
+advanced-cache.php
+cache/
+object-cache.php
 plugins/akismet/
 plugins/amp/
 plugins/ewww-image-optimizer-cloud/
