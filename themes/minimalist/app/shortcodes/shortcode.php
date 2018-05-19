@@ -1,6 +1,6 @@
-<?php defined('CALIBREFX_URL') OR exit();
+<?php defined( 'CALIBREFX_URL' ) or exit();
 
-//Sample 
+//Sample
 
 /*add_shortcode( 'read_more', 'cm_readmore_button');
 function cm_readmore_button($atts, $content = ''){
