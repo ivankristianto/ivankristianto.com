@@ -1,0 +1,55 @@
+node_modules
+bower_components
+release
+vendor
+composer.lock
+phpunit.xml
+.idea
+
+# Project Files
+dist
+
+# Editors
+*.esproj
+*.tmproj
+*.tmproject
+tmtags
+.*.sw[a-z]
+*.un~
+Session.vim
+*.swp
+
+# Mac OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Some plugins
+plugins/akismet/
+plugins/amp/
+plugins/ewww-image-optimizer-cloud/
+plugins/fb-instant-articles/
+plugins/formidable-pro/
+plugins/formidable/
+plugins/gutenberg/
+plugins/hello.php
+plugins/index.php
+plugins/jetpack/
+plugins/limit-login-attempts/
+plugins/litespeed-cache/
+plugins/menu-items-visibility-control/
+plugins/post-thumbnail-editor/
+plugins/regenerate-thumbnails/
+plugins/safe-redirect-manager/
+plugins/syntaxhighlighter/
+plugins/thirstyaffiliates/
+plugins/wordpress-seo/
+plugins/wp-super-cache/
+themes/twentyfifteen/
+themes/twentyseventeen/
+themes/twentysixteen/

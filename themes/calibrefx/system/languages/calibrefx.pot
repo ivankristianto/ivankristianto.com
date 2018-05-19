@@ -1,0 +1,1608 @@
+# The CalibreFx v2.0 Translation Master File
+# Copyright © 2015 CalibreWorks
+# This file is distributed under the same license as the CalibreFx package.
+msgid ""
+msgstr ""
+"Project-Id-Version: CalibreFx\n"
+"POT-Creation-Date: 2014-12-26 15:36+0700\n"
+"PO-Revision-Date: 2014-12-26 15:37+0700\n"
+"Last-Translator: Hilaladdiyar Muhammad Nur <hilaladdiyar@gmail.com>\n"
+"Language-Team: Calibreworks.com <info@calibreworks.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_ex\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../class.calibrefx-admin.php:186
+msgid "Settings saved."
+msgstr ""
+
+#: ../class.calibrefx-admin.php:188
+msgid "Settings reset."
+msgstr ""
+
+#: ../class.calibrefx-admin.php:190
+msgid "Settings not saved. Error occured."
+msgstr ""
+
+#: ../class.calibrefx-admin.php:192
+msgid "Import Settings Success."
+msgstr ""
+
+#: ../class.calibrefx-admin.php:236 ../class.calibrefx-admin.php:283
+msgid "Save Settings"
+msgstr ""
+
+#: ../class.calibrefx-admin.php:237 ../class.calibrefx-admin.php:284
+msgid "Are you sure you want to reset?"
+msgstr ""
+
+#: ../class.calibrefx-admin.php:237 ../class.calibrefx-admin.php:284
+msgid "Reset Settings"
+msgstr ""
+
+#: ../class.calibrefx-modules-list-table.php:54
+#: ../shortcodes/calibrefx_shortcode.php:1611
+msgid "Name"
+msgstr ""
+
+#: ../class.calibrefx-modules-list-table.php:61
+msgid "Activate"
+msgstr ""
+
+#: ../class.calibrefx-modules-list-table.php:62
+msgid "Deactivate"
+msgstr ""
+
+#: ../class.calibrefx.php:66
+msgid "Primary Navigation Menu"
+msgstr ""
+
+#: ../class.calibrefx.php:67
+msgid "Secondary Navigation Menu"
+msgstr ""
+
+#: ../helpers/html_helper.php:65
+msgid "About"
+msgstr ""
+
+#: ../helpers/layout_helper.php:97
+msgid "No Label Selected"
+msgstr ""
+
+#: ../helpers/meta_helper.php:98 ../helpers/opengraph_helper.php:160
+msgid "All posts in "
+msgstr ""
+
+#: ../helpers/meta_helper.php:100 ../helpers/meta_helper.php:102
+#: ../helpers/opengraph_helper.php:162 ../helpers/opengraph_helper.php:164
+msgid "All Posts in "
+msgstr ""
+
+#: ../helpers/meta_helper.php:110
+msgid "Page not found "
+msgstr ""
+
+#: ../helpers/opengraph_helper.php:77 ../helpers/opengraph_helper.php:81
+#: ../helpers/opengraph_helper.php:83 ../helpers/opengraph_helper.php:85
+#: ../helpers/opengraph_helper.php:87 ../helpers/opengraph_helper.php:89
+#: ../helpers/opengraph_helper.php:91
+msgid "Archive for "
+msgstr ""
+
+#: ../helpers/opengraph_helper.php:94
+msgid "Not Found"
+msgstr ""
+
+#: ../helpers/post_helper.php:93
+msgid "Older Posts"
+msgstr ""
+
+#: ../helpers/post_helper.php:94
+msgid "Newer Posts"
+msgstr ""
+
+#: ../helpers/post_helper.php:115 ../helpers/post_helper.php:181
+msgid "Previous Page"
+msgstr ""
+
+#: ../helpers/post_helper.php:116 ../helpers/post_helper.php:216
+msgid "Next Page"
+msgstr ""
+
+#: ../hooks/admin_hook.php:25 ../libraries/Other_settings.php:284
+msgid "Theme Settings"
+msgstr ""
+
+#: ../hooks/admin_hook.php:26
+msgid "Settings"
+msgstr ""
+
+#: ../hooks/admin_hook.php:41
+msgid "Modules"
+msgstr ""
+
+#: ../hooks/admin_hook.php:55
+msgid "Extras"
+msgstr ""
+
+#: ../hooks/admin_hook.php:99
+msgid "Powered By "
+msgstr ""
+
+#: ../hooks/admin_hook.php:109
+msgid "ERROR: You lack permissions to create posts."
+msgstr ""
+
+#: ../hooks/admin_hook.php:113
+msgid "ERROR: No slug was passed to the AJAX callback."
+msgstr ""
+
+#: ../hooks/comments_hook.php:43 ../hooks/comments_hook.php:205
+msgid "Leave us your thought"
+msgstr ""
+
+#: ../hooks/comments_hook.php:79
+msgid "<h3>Comments</h3>"
+msgstr ""
+
+#: ../hooks/comments_hook.php:118
+msgid "<h3>Trackbacks</h3>"
+msgstr ""
+
+#: ../hooks/comments_hook.php:178
+msgid "Your Name (required)"
+msgstr ""
+
+#: ../hooks/comments_hook.php:183
+msgid "Your Email (required)"
+msgstr ""
+
+#: ../hooks/comments_hook.php:185
+msgid "Your email will be keep safe and won't be shared with third party"
+msgstr ""
+
+#: ../hooks/comments_hook.php:189
+msgid "Your Website Url"
+msgstr ""
+
+#: ../hooks/comments_hook.php:191
+msgid "(start with http://)"
+msgstr ""
+
+#: ../hooks/comments_hook.php:230
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">%s:</span>"
+msgstr ""
+
+#: ../hooks/comments_hook.php:230
+msgid "says"
+msgstr ""
+
+#: ../hooks/comments_hook.php:234
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../hooks/comments_hook.php:235
+msgid "Edit"
+msgstr ""
+
+#: ../hooks/comments_hook.php:240
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../hooks/customizer_hook.php:7 ../libraries/Theme_settings.php:105
+#: ../libraries/Theme_settings.php:566
+msgid "Layout Settings"
+msgstr ""
+
+#: ../hooks/customizer_hook.php:18
+msgid "Default Layout Type"
+msgstr ""
+
+#: ../hooks/customizer_hook.php:22 ../libraries/Theme_settings.php:580
+msgid "Fluid Layout"
+msgstr ""
+
+#: ../hooks/customizer_hook.php:23
+msgid "Static Layout"
+msgstr ""
+
+#: ../hooks/customizer_hook.php:35
+msgid "Layout Width"
+msgstr ""
+
+#: ../hooks/customizer_hook.php:48
+msgid "Default Layout Column"
+msgstr ""
+
+#: ../hooks/footer_hook.php:96
+msgid "Copyright"
+msgstr ""
+
+#: ../hooks/footer_hook.php:96
+msgid "built on"
+msgstr ""
+
+#: ../hooks/footer_hook.php:96
+msgid "Powered By"
+msgstr ""
+
+#: ../hooks/header_hook.php:139
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:18
+msgid "Calibrefx Custom Layout"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:29
+msgid "Pick your custom layout column"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:61
+msgid "Custom Body CSS Class"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:74
+msgid "Custom Post CSS Class"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:121
+#, php-format
+msgid "Default Layout set in <a href=\"%s\">Theme Settings</a>"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:128
+msgid "Custom Body Class"
+msgstr ""
+
+#: ../hooks/inpost_hook.php:129
+msgid "Custom Post Class"
+msgstr ""
+
+#: ../hooks/layout_hook.php:148
+msgid "Content Sidebar (default blog)"
+msgstr ""
+
+#: ../hooks/layout_hook.php:155
+msgid "Full Width Content (minisite)"
+msgstr ""
+
+#: ../hooks/layout_hook.php:161
+msgid "Sidebar Content"
+msgstr ""
+
+#: ../hooks/layout_hook.php:167
+msgid "Sidebar Content Sidebar"
+msgstr ""
+
+#: ../hooks/layout_hook.php:296
+msgid "Primary Sidebar Widget Area"
+msgstr ""
+
+#: ../hooks/layout_hook.php:299
+#, php-format
+msgid ""
+"This is the Primary Sidebar Widget Area. You can add content to this area by "
+"visiting your <a href=\"%s\">Widgets Panel</a> and adding new widgets to "
+"this area."
+msgstr ""
+
+#: ../hooks/layout_hook.php:316
+msgid "Secondary Sidebar Widget Area"
+msgstr ""
+
+#: ../hooks/layout_hook.php:319
+#, php-format
+msgid ""
+"This is the Secondary Sidebar Widget Area. You can add content to this area "
+"by visiting your <a href=\"%s\">Widgets Panel</a> and adding new widgets to "
+"this area."
+msgstr ""
+
+#: ../hooks/menu_hook.php:69
+msgid "MENU"
+msgstr ""
+
+#: ../hooks/post_hook.php:158
+msgid "By"
+msgstr ""
+
+#: ../hooks/post_hook.php:237 ../shortcodes/post_shortcode.php:270
+msgid "(Edit)"
+msgstr ""
+
+#: ../hooks/post_hook.php:243
+msgid "[Read more...]"
+msgstr ""
+
+#: ../hooks/post_hook.php:250
+msgid "Pages:"
+msgstr ""
+
+#: ../hooks/post_hook.php:271
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: ../hooks/script_hook.php:106
+msgid "Select / Deselect All"
+msgstr ""
+
+#: ../hooks/user_hook.php:8
+msgid "Facebook Profile"
+msgstr ""
+
+#: ../hooks/user_hook.php:9
+msgid "Twitter Account"
+msgstr ""
+
+#: ../hooks/user_hook.php:10
+msgid "Youtube Channel"
+msgstr ""
+
+#: ../hooks/user_hook.php:11
+msgid "Linkedin Profile"
+msgstr ""
+
+#: ../hooks/user_hook.php:35
+msgid "Author Archive Settings"
+msgstr ""
+
+#: ../hooks/user_hook.php:36
+msgid "These settings apply to this author's archive pages."
+msgstr ""
+
+#: ../hooks/user_hook.php:40
+msgid "Custom Archive Headline"
+msgstr ""
+
+#: ../hooks/user_hook.php:43
+#, php-format
+msgid "Will display in the %s tag at the top of the first page"
+msgstr ""
+
+#: ../hooks/user_hook.php:48
+msgid "Custom Description Text"
+msgstr ""
+
+#: ../hooks/user_hook.php:51
+msgid "This text will be the first paragraph, and display on the first page"
+msgstr ""
+
+#: ../hooks/user_hook.php:56
+msgid "Author Box"
+msgstr ""
+
+#: ../hooks/user_hook.php:59
+msgid "Enable Author Box on this User's Posts?"
+msgstr ""
+
+#: ../hooks/user_hook.php:61
+msgid "Enable Author Box on this User's Archives?"
+msgstr ""
+
+#: ../hooks/widget_hook.php:11
+#, php-format
+msgid "%s (Calibrefx)"
+msgstr ""
+
+#: ../hooks/widget_hook.php:21
+msgid "Primary Sidebar"
+msgstr ""
+
+#: ../hooks/widget_hook.php:22
+msgid ""
+"This is the primary sidebar if you are using a 2 or 3 column site layout "
+"option"
+msgstr ""
+
+#: ../hooks/widget_hook.php:27
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: ../hooks/widget_hook.php:28
+msgid ""
+"This is the secondary sidebar if you are using a 3 column site layout option"
+msgstr ""
+
+#: ../hooks/widget_hook.php:44
+msgid "Header Right"
+msgstr ""
+
+#: ../hooks/widget_hook.php:45
+msgid "This is the right side of the header"
+msgstr ""
+
+#: ../hooks/widget_hook.php:54
+msgid "Footer Widget"
+msgstr ""
+
+#: ../hooks/widget_hook.php:55
+msgid "This is the footer widget"
+msgstr ""
+
+#: ../hooks/widget_hook.php:69
+msgid "Calibrefx Advanced Settings"
+msgstr ""
+
+#: ../hooks/widget_hook.php:74
+msgid "Custom Widget Classes"
+msgstr ""
+
+#: ../hooks/widget_hook.php:77
+msgid "This will set a custom classes for your widget"
+msgstr ""
+
+#: ../hooks/widget_hook.php:80
+msgid "Custom Icon Classes"
+msgstr ""
+
+#: ../hooks/widget_hook.php:83
+msgid ""
+"This set an icon in widget title using font-awesome. <a href=\"http://"
+"fortawesome.github.io/Font-Awesome/icons/\" target=\"_blank\">Learn more "
+"about font-awesome.</a>"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:32
+msgid "Home"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:43
+msgid "You are here: "
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:44 ../libraries/Breadcrumb.php:45
+#: ../libraries/Breadcrumb.php:46 ../libraries/Breadcrumb.php:47
+#: ../libraries/Breadcrumb.php:49 ../libraries/Breadcrumb.php:50
+msgid "Archives for "
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:48
+msgid "Search for "
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:51
+msgid "Not found: "
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:89 ../libraries/Breadcrumb.php:170
+#: ../libraries/Breadcrumb.php:248
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:213 ../libraries/Breadcrumb.php:218
+#, php-format
+msgid "View archives for %s"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:221
+#, php-format
+msgid "View archives for %s %s"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:264
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:282
+#, php-format
+msgid "View all %s"
+msgstr ""
+
+#: ../libraries/Breadcrumb.php:337
+#, php-format
+msgid "View all items in %s"
+msgstr ""
+
+#: ../libraries/Module_settings.php:37
+msgid "Available Modules"
+msgstr ""
+
+#: ../libraries/Module_settings.php:43
+msgid "Modules Available"
+msgstr ""
+
+#: ../libraries/Other_settings.php:39
+msgid "System Information"
+msgstr ""
+
+#: ../libraries/Other_settings.php:40 ../libraries/Other_settings.php:56
+msgid "TOS Generator"
+msgstr ""
+
+#: ../libraries/Other_settings.php:41
+msgid "Import / Export Settings"
+msgstr ""
+
+#: ../libraries/Other_settings.php:53
+msgid "Information"
+msgstr ""
+
+#: ../libraries/Other_settings.php:59 ../libraries/Other_settings.php:263
+msgid "Import Settings"
+msgstr ""
+
+#: ../libraries/Other_settings.php:60 ../libraries/Other_settings.php:273
+msgid "Export Settings"
+msgstr ""
+
+#: ../libraries/Other_settings.php:73
+msgid "Framework Name: "
+msgstr ""
+
+#: ../libraries/Other_settings.php:73
+msgid "Codename: "
+msgstr ""
+
+#: ../libraries/Other_settings.php:74 ../libraries/Other_settings.php:82
+msgid "Version:"
+msgstr ""
+
+#: ../libraries/Other_settings.php:74
+msgid "Released:"
+msgstr ""
+
+#: ../libraries/Other_settings.php:75
+msgid "DB Version: "
+msgstr ""
+
+#: ../libraries/Other_settings.php:81
+msgid "Themes Name: "
+msgstr ""
+
+#: ../libraries/Other_settings.php:83
+msgid "Themes Author URL:"
+msgstr ""
+
+#: ../libraries/Other_settings.php:255
+msgid ""
+"Upload the data file (<code>.json</code>) from your computer and we'll "
+"import your settings."
+msgstr ""
+
+#: ../libraries/Other_settings.php:256
+msgid "Choose the file from your computer and click \"Upload file and Import\""
+msgstr ""
+
+#: ../libraries/Other_settings.php:259
+#, php-format
+msgid "Upload File: (Maximum Size: %s)"
+msgstr ""
+
+#: ../libraries/Other_settings.php:270
+msgid "Press the download button below to export all the settings to file"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:104
+msgid "General Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:106
+msgid "Social Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:117
+msgid "Content Setting"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:118
+msgid "Navigation Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:119
+msgid "Post Comment Setting"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:120
+msgid "Website Tracking Setting"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:122
+msgid "Website Layout Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:123
+msgid "Themes Advanced Customization"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:125
+msgid "Social Integration"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:144
+msgid "Menu Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:150
+msgid "Primary Navigation"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:156
+msgid "You can assign primary menu from the Apperances > Menu"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:164
+msgid "Secondary Navigation"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:170
+msgid "You can assign secondary menu from the Apperances > Menu"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:185
+msgid "Google Anlytic Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:186
+msgid "Facebook Tracking Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:192
+msgid "Google Analytics ID"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:197
+msgid "Enter your google analytics ID, example: <strong>UA-xxxxxxxx-x</strong>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:205
+msgid "Paste your Google Tag Manager Script"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:210
+msgid ""
+"Learn more about Google Tag Manager <a href='http://www.google.com/"
+"tagmanager/get-started.html' target='_blank'>here</a>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:220
+msgid "Paste your Facebook conversion pixels"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:225
+msgid ""
+"Learn more about Facebook conversion pixel <a href='https://www.facebook.com/"
+"help/435189689870514/' target='_blank'>here</a>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:240
+msgid "Post Info Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:241
+msgid "Breadcrumb Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:242
+msgid "Category Page Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:243
+msgid "Post Navigation Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:250
+msgid "Show Post Published Date"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:263
+msgid "Show Post Author"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:276
+msgid "Show Post Comment Count"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:289
+msgid "Show Post Category"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:302
+msgid "Show Post Tags"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:318
+msgid "Show Breadcrumb on Homepage"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:331
+msgid "Show Breadcrumb on Blog Post"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:344
+msgid "Show Breadcrumb on Static Page"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:357
+msgid "Show Breadcrumb on Archive / Category Page"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:370
+msgid "Show Breadcrumb on 404 Page"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:383
+msgid "Check it if you want to show breadcrumb in any of thoses pages."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:396
+msgid "How do you want to show the excerpt of the content on blog post list?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:401
+msgid "Display post content"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:402
+msgid "Display post excerpts"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:414
+msgid "Limit total characters for your content excerpt"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:419
+msgid "To show all contents fill with <code>0</code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:431
+msgid "How do you want to show the post navigation?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:436
+msgid "Older/Newer"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:437
+msgid "Previous/Next"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:438
+msgid "Numeric"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:439
+msgid "Don't show navigation"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:444
+msgid ""
+"There are 3 types of pagination available. Choose which one is the best for "
+"you."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:459
+msgid "Comments"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:460
+msgid "Trackbacks"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:461
+msgid "Social Comment Integration"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:468
+msgid "Show comment on post?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:480
+msgid "Show comment on page?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:493
+msgid ""
+"You can generally disabled comment on posts or pages. Uncheck it if you want "
+"to disable comment box."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:506
+msgid "Show trackbacks on posts?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:518
+msgid "Show trackbacks on pages?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:531
+msgid ""
+"You can generally disabled trackback / pingbacks on posts or pages. Uncheck "
+"it if you want to disable comment box. <br/>\n"
+"                     Learn more about WordPress Trackbacks and Pingbacks <a "
+"href=\"https://make.wordpress.org/support/user-manual/building-your-"
+"wordpress-community/trackbacks-and-pingbacks/\" target=\"_blank\">here</a>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:545
+msgid "Use Facebook comment instead of WordPress Default Comment"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:551
+msgid ""
+"You can override WordPress default comment to use Facebook comment box. "
+"Please check it if you would like to activate it."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:567
+msgid "General Layout Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:574
+msgid "How would you like the main layout of the website?"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:579
+msgid "Fix Width Layout"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:592
+msgid "Layout Width (pixels)"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:605
+msgid "Use Wrapper Border Box"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:611
+msgid "Check this if you want to have wrapper box layout."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:620
+msgid "Check this to disable responsive"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:626
+msgid "Check this if you want to disable mobile responsive feature"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:637
+msgid "Pick your general layout column"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:654
+msgid ""
+"You can choose your Website layout. You can override per post / page later."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:672
+msgid "Style Customization"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:673
+msgid "Javascript Customization"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:679
+msgid "Custom CSS code will be output at <code>wp_head()</code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:684
+msgid ""
+"You can add your custom css codes here. Example: <code>a.hover {color:"
+"#ffffff}</code>."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:692
+msgid "Header script will be output at <code>wp_head()</code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:697
+msgid ""
+"You can add your javascript at the head of the page. For example Google "
+"analytics code. <br/>Samples: <code>&lt;script type=\"text/javascript"
+"\">alert(\"Hello World\");&lt;/script></code>."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:705
+msgid "Footer scripts will be output at <code>wp_footer()</code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:710
+msgid ""
+"You can add your javascript at the footer of the page. For example Google "
+"analytics code. <br/>Samples: <code>&lt;script type=\"text/javascript"
+"\">alert(\"Hello World\");&lt;/script></code>."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:725
+msgid "Facebook Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:726
+msgid "Social URL Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:727
+msgid "RSS Feed Settings"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:733
+msgid "Facebook Admin ID"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:738
+msgid ""
+"This will be use for Facebook Insight. <br/>This will output: <code>&lt;meta "
+"property=\"fb:admins\" content=\"YOUR ADMIN ID HERE\"/></code> Read More "
+"about this <a href='https://developers.facebook.com/docs/insights/' "
+"target='_blank'>here</a>."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:746
+msgid "Facebook Page Type"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:766
+msgid ""
+"This is open graph protocol that helo to identify your content. <br/>This "
+"will output: <code>&lt;meta property=\"og:type\" content=\"TYPE\"/></code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:776
+msgid "Google+ Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:781
+msgid ""
+"This will output <code>&lt;link rel=\"author\" href=\"YOUR GOOGLE+ URL HERE"
+"\"/></code> in html head."
+msgstr ""
+
+#: ../libraries/Theme_settings.php:790
+msgid "Google+ Page URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:795
+msgid ""
+"This will use for Google Page For Business url, and it will show if using "
+"the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:804
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:809
+msgid ""
+"This will use for Facebook Page url, and it will show if using the Social "
+"Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:818
+msgid "Twitter Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:823
+msgid ""
+"This will use for Twitter url, and it will show if using the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:832
+msgid "Youtube Channel URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:837
+msgid ""
+"This will use for Youtube Channel url, and it will show if using the Social "
+"Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:846
+msgid "Linkedin Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:851
+msgid ""
+"This will use for Linkedin url, and it will show if using the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:860
+msgid "Pinterest Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:865
+msgid ""
+"This will use for Pinterest url, and it will show if using the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:874
+msgid "Instagram Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:879
+msgid ""
+"This will use for Instagram url, and it will show if using the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:888
+msgid "Github Profile URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:893
+msgid ""
+"This will use for Github url, and it will show if using the Social Widget"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:904
+msgid "Main Feed URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:909
+msgid ""
+"You can replace WordPress builtin Feed URL using this options. For sample "
+"you want to use feedburner instead. <br/>Sample: <code>http://feeds2."
+"feedburner.com/calibrefx.</code>"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:918
+msgid "Comment Feed URL"
+msgstr ""
+
+#: ../libraries/Theme_settings.php:923
+msgid ""
+"You can replace WordPress builtin Feed URL using this options. For sample "
+"you want to use feedburner instead. <br/>Sample: <code>http://feeds2."
+"feedburner.com/calibrefxcomment.</code>"
+msgstr ""
+
+#. translators: %s: title of menu item which is invalid
+#: ../libraries/Walker_nav_menu_edit.php:78
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#. translators: %s: title of menu item in draft status
+#: ../libraries/Walker_nav_menu_edit.php:82
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:123
+msgid "Edit Menu Item"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:132
+msgid "URL"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:139
+msgid "Navigation Label"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:145
+msgid "Title Attribute"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:152
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:157
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:163
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:169
+msgid "Description"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:171
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:179
+msgid "Custom Icon (label <code>i</code> class)"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:190
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:203
+msgid "Remove"
+msgstr ""
+
+#: ../libraries/Walker_nav_menu_edit.php:204
+msgid "Cancel"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:72
+msgid "Not a valid Youtube video ID. The video cannot be shown . "
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:92
+msgid ""
+"The youtube video is currently not available. The video cannot be shown . "
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1612
+msgid "Fill with your name"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1613
+msgid "Your name"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1619
+msgid "Email"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1620
+msgid "Fill with your email"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1621
+msgid "Your email"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1627
+msgid "Subject"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1628
+#: ../shortcodes/calibrefx_shortcode.php:1629
+msgid "Your subject"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1635
+msgid "Message"
+msgstr ""
+
+#: ../shortcodes/calibrefx_shortcode.php:1636
+#: ../shortcodes/calibrefx_shortcode.php:1637
+msgid "Your message"
+msgstr ""
+
+#: ../shortcodes/footer_shortcode.php:21
+msgid "Return To Top"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:26
+msgid "ago"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:105
+#, php-format
+msgid "Visit %s&#8217;s website"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:164
+msgid "% Comments"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:165
+msgid "1 Comment"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:166
+msgid "Leave a Comment"
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:197
+msgid "Tagged With: "
+msgstr ""
+
+#: ../shortcodes/post_shortcode.php:220 ../shortcodes/post_shortcode.php:244
+msgid "Filed Under: "
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:20
+msgid "Facebook Comment"
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:23
+msgid "Display a Facebook Comment"
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:79
+#: ../widgets/facebook_like_widget.php:111
+#: ../widgets/feature_page_widget.php:110
+#: ../widgets/feature_post_widget.php:122
+#: ../widgets/latest_post_widget.php:137
+#: ../widgets/popular_post_widget.php:134 ../widgets/social_widget.php:169
+#: ../widgets/subscriber_widget.php:92
+#: ../widgets/twitter_timeline_widget.php:86
+msgid "Title"
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:84
+#: ../widgets/facebook_like_widget.php:116
+msgid "Facebook Url"
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:91
+#: ../widgets/facebook_like_widget.php:123
+msgid "Width"
+msgstr ""
+
+#: ../widgets/facebook_comment_widget.php:96
+msgid "Number Of Posts"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:21
+msgid "Facebook Likebox"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:24
+msgid ""
+"Display a Facebook Likebox to allow your visitor like your Facebook Page"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:128
+msgid "Height"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:135
+msgid "Color Scheme"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:137
+msgid "Light"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:138
+#: ../widgets/twitter_timeline_widget.php:107
+msgid "Dark"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:143
+msgid "Background Color"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:149
+msgid "Show Border"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:150
+msgid "Show Faces"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:151
+msgid "Show Stream"
+msgstr ""
+
+#: ../widgets/facebook_like_widget.php:152
+msgid "Show Header"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:21
+msgid "Feature Page"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:24
+msgid "Display feature page with thumbnail on your sidebar"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:115
+msgid "Page"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:123
+#: ../widgets/feature_post_widget.php:149
+msgid "Show Featured Image"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:127
+#: ../widgets/feature_post_widget.php:153
+#: ../widgets/latest_post_widget.php:164
+#: ../widgets/popular_post_widget.php:161
+msgid "Image Size"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:139
+#: ../widgets/feature_post_widget.php:165
+msgid "Image Alignment"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:141
+#: ../widgets/feature_post_widget.php:167
+msgid "None"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:142
+#: ../widgets/feature_post_widget.php:168
+msgid "Left"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:143
+#: ../widgets/feature_post_widget.php:169
+msgid "Right"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:151
+#: ../widgets/feature_post_widget.php:177
+msgid "Show Page Title"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:156
+#: ../widgets/feature_post_widget.php:182
+msgid "Show Page Content"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:160
+#: ../widgets/feature_post_widget.php:191
+msgid "Content Character Limit"
+msgstr ""
+
+#: ../widgets/feature_page_widget.php:165
+#: ../widgets/feature_post_widget.php:196
+msgid "More Text"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:21
+msgid "Feature Post"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:24
+msgid "Display feature post with thumbnail on your sidebar"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:127
+msgid "Category"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:134
+msgid "All Categories"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:141
+msgid "Number of Posts to Show"
+msgstr ""
+
+#: ../widgets/feature_post_widget.php:187
+msgid "Show Date Content"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:21
+msgid "Recent Posts"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:24
+msgid "Display recent posts with thumbnail on your sidebar"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:109
+#: ../widgets/popular_post_widget.php:106
+msgid "There is no post available yet"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:142
+#: ../widgets/popular_post_widget.php:139
+msgid "Number of posts to show"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:148
+#: ../widgets/popular_post_widget.php:145
+msgid "Show Content"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:152
+#: ../widgets/popular_post_widget.php:149
+msgid "Content Length"
+msgstr ""
+
+#: ../widgets/latest_post_widget.php:160
+#: ../widgets/popular_post_widget.php:157
+msgid "Show Thumbnail"
+msgstr ""
+
+#: ../widgets/popular_post_widget.php:21
+msgid "Popular Posts"
+msgstr ""
+
+#: ../widgets/popular_post_widget.php:24
+msgid "Display popular posts with thumbnail on your sidebar"
+msgstr ""
+
+#: ../widgets/social_widget.php:20
+msgid "Social Media"
+msgstr ""
+
+#: ../widgets/social_widget.php:23
+msgid "Display social media link"
+msgstr ""
+
+#: ../widgets/social_widget.php:74
+msgid "View us on facebook"
+msgstr ""
+
+#: ../widgets/social_widget.php:83
+msgid "View us on twitter"
+msgstr ""
+
+#: ../widgets/social_widget.php:92
+msgid "View us on google+"
+msgstr ""
+
+#: ../widgets/social_widget.php:101
+msgid "View our youtube channel"
+msgstr ""
+
+#: ../widgets/social_widget.php:110
+msgid "View us on linkedin"
+msgstr ""
+
+#: ../widgets/social_widget.php:119
+msgid "View us on pinterest"
+msgstr ""
+
+#: ../widgets/social_widget.php:128
+msgid "View us on instagram"
+msgstr ""
+
+#: ../widgets/social_widget.php:137
+msgid "View us on github"
+msgstr ""
+
+#: ../widgets/social_widget.php:178
+msgid "Layout Type"
+msgstr ""
+
+#: ../widgets/social_widget.php:180
+msgid "Horizontal"
+msgstr ""
+
+#: ../widgets/social_widget.php:181
+msgid "Vertical"
+msgstr ""
+
+#: ../widgets/social_widget.php:186
+msgid "Icon Size"
+msgstr ""
+
+#: ../widgets/social_widget.php:188 ../widgets/social_widget.php:200
+#: ../widgets/twitter_timeline_widget.php:106
+msgid "Default"
+msgstr ""
+
+#: ../widgets/social_widget.php:189
+msgid "Large"
+msgstr ""
+
+#: ../widgets/social_widget.php:190
+msgid "2x"
+msgstr ""
+
+#: ../widgets/social_widget.php:191
+msgid "3x"
+msgstr ""
+
+#: ../widgets/social_widget.php:192
+msgid "4x"
+msgstr ""
+
+#: ../widgets/social_widget.php:193
+msgid "5x"
+msgstr ""
+
+#: ../widgets/social_widget.php:198
+msgid "Icon Style"
+msgstr ""
+
+#: ../widgets/social_widget.php:201
+msgid "Boxed"
+msgstr ""
+
+#: ../widgets/social_widget.php:210
+msgid "Facebook label"
+msgstr ""
+
+#: ../widgets/social_widget.php:215
+msgid "Twitter label"
+msgstr ""
+
+#: ../widgets/social_widget.php:220
+msgid "Google+ label"
+msgstr ""
+
+#: ../widgets/social_widget.php:225
+msgid "Youtube label"
+msgstr ""
+
+#: ../widgets/social_widget.php:230
+msgid "LinkedIn link label"
+msgstr ""
+
+#: ../widgets/social_widget.php:235
+msgid "Pinterest label"
+msgstr ""
+
+#: ../widgets/social_widget.php:240
+msgid "Instagram label"
+msgstr ""
+
+#: ../widgets/social_widget.php:245
+msgid "Github label"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:20
+msgid "Feedburner Subscribe"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:23
+msgid "Display email subscriber form for Feedburner"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:97
+msgid "Text To Show"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:102
+msgid "Google/Feedburner ID"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:107
+msgid "Enter your email address..."
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:108
+msgid "Input Text"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:113
+msgid "Go"
+msgstr ""
+
+#: ../widgets/subscriber_widget.php:114
+msgid "Button Text"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:20
+msgid "Twitter Widget"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:23
+msgid "Display Twitter Timeline Widget"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:91
+msgid "Twitter Username"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:96
+msgid "Widget ID"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:98
+msgid ""
+"You can get the widget ID from <a href=\"https://twitter.com/settings/widgets"
+"\" target=\"_blank\">widgets section of your twitter settings page</a>"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:104
+msgid "Widget Theme"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:112
+msgid "Widget Width"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:117
+msgid "Widget Height"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:122
+msgid "Link Color"
+msgstr ""
+
+#: ../widgets/twitter_timeline_widget.php:127
+msgid "Border Color"
+msgstr ""
