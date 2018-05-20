@@ -6,6 +6,7 @@ composer.lock
 phpunit.xml
 .idea
 debug.log
+.object-cache.ini
 
 # Project Files
 dist

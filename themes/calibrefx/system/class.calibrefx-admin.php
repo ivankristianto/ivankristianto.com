@@ -69,7 +69,7 @@ abstract class Calibrefx_Admin {
 		//We add the security layer here
 		$this->security_filters();
 
-		if ( ! isset( $_SERVER['REQUEST_METHOD'] ) OR 'POST' !== esc_attr( $_SERVER['REQUEST_METHOD'] ) ) {
+		if ( ! isset( $_SERVER['REQUEST_METHOD'] ) or 'POST' !== esc_attr( $_SERVER['REQUEST_METHOD'] ) ) {
 			return;
 		}
 
@@ -112,7 +112,7 @@ abstract class Calibrefx_Admin {
 	 * $return array
 	 */
 	public function save( $_newvalue, $_oldvalue ) {
-		
+
 		//We merge newvalue and oldvalue
 		if ( isset( $_newvalue['reset'] ) ) {
 			return $_newvalue;
@@ -126,19 +126,20 @@ abstract class Calibrefx_Admin {
 
 		$_newvalue = isset( $_POST[ $this->settings_field ] ) ? $_POST[ $this->settings_field ] : array();
 
-		if($_newvalue){
+		if ( $_newvalue ) {
 			$_newvalue = ( is_array( $_newvalue ) ) ? array_map( 'esc_attr', $_newvalue ) : esc_attr( $_newvalue );
 		}
 
 		//merge value from old settings
-		if ( ! is_array( $_oldvalue ) ) { $_oldvalue = array(); }
-		if ( ! is_array( $_newvalue ) ) { $_newvalue = array(); }
+		if ( ! is_array( $_oldvalue ) ) {
+			$_oldvalue = array(); }
+		if ( ! is_array( $_newvalue ) ) {
+			$_newvalue = array(); }
 
 		$_newvalue = array_merge( $_oldvalue, $_newvalue );
 
 		//We merge with default value too
 		$_newvalue = array_merge( (array) $this->default_settings, $_newvalue );
-
 
 		if ( ! empty( $_newvalue ) ) {
 			//We sanitizing
@@ -160,14 +161,14 @@ abstract class Calibrefx_Admin {
 	public function register_settings() {
 
 		/** If this page doesn't store settings, no need to register them */
-		if ( ! $this->settings_field ){
+		if ( ! $this->settings_field ) {
 			return;
 		}
 
 		register_setting( $this->settings_field, $this->settings_field );
 		add_option( $this->settings_field, $this->default_settings );
 
-		if ( ! isset( $_REQUEST['page'] ) OR $this->page_id != absint( $_REQUEST['page'] ) ){
+		if ( ! isset( $_REQUEST['page'] ) or $this->page_id != absint( $_REQUEST['page'] ) ) {
 			return;
 		}
 
@@ -175,8 +176,8 @@ abstract class Calibrefx_Admin {
 			//prevent redirect loop
 			calibrefx_set_option( 'reset', 0 );
 			wp_cache_flush(); //refresh option caches
-			
-			if ( update_option( $this->settings_field, $this->default_settings ) ){
+
+			if ( update_option( $this->settings_field, $this->default_settings ) ) {
 				calibrefx_admin_redirect( $this->page_id, array( 'reset' => 'true' ) );
 			} else {
 				calibrefx_admin_redirect( $this->page_id, array( 'error' => 'true' ) );
@@ -191,17 +192,17 @@ abstract class Calibrefx_Admin {
 	 * @return null Returns early if not on the correct admin page.
 	 */
 	public function notices() {
-		if ( ! isset( $_REQUEST['page'] ) OR $this->page_id != $_REQUEST['page'] ){
+		if ( ! isset( $_REQUEST['page'] ) or $this->page_id !== $_REQUEST['page'] ) {
 			return;
 		}
 
-		if ( isset( $_REQUEST['settings-updated'] ) AND 'true' == $_REQUEST['settings-updated'] ){
+		if ( isset( $_REQUEST['settings-updated'] ) and 'true' === $_REQUEST['settings-updated'] ) {
 			echo '<div id="message" class="updated"><p><strong>' . __( 'Settings saved.', 'calibrefx' ) . '</strong></p></div>';
-		} elseif ( isset( $_REQUEST['reset'] ) AND 'true' == $_REQUEST['reset'] ) {
+		} elseif ( isset( $_REQUEST['reset'] ) and 'true' == $_REQUEST['reset'] ) {
 			echo '<div id="message" class="updated"><p><strong>' . __( 'Settings reset.', 'calibrefx' ) . '</strong></p></div>';
-		} elseif ( isset( $_REQUEST['error'] ) AND 'true' == $_REQUEST['error'] ){
+		} elseif ( isset( $_REQUEST['error'] ) and 'true' == $_REQUEST['error'] ) {
 			echo '<div id="message" class="updated"><p><strong>' . __( 'Settings not saved. Error occured.', 'calibrefx' ) . '</strong></p></div>';
-		} elseif ( isset( $_REQUEST['import'] ) AND 'true' == $_REQUEST['import'] ){
+		} elseif ( isset( $_REQUEST['import'] ) and 'true' == $_REQUEST['import'] ) {
 			echo '<div id="message" class="updated"><p><strong>' . __( 'Import Settings Success.', 'calibrefx' ) . '</strong></p></div>';
 		}
 	}
@@ -227,106 +228,105 @@ abstract class Calibrefx_Admin {
 		global $calibrefx_sections,
 			   $calibrefx_current_section;
 
-		$this->_submit_url = apply_filters( 'calibrefx_'.$calibrefx_current_section.'_form_url', 'options.php' );
+		$this->_submit_url = apply_filters( 'calibrefx_' . $calibrefx_current_section . '_form_url', 'options.php' );
 
 		?>
-        <div id="<?php echo $this->settings_field;?>-page" class="wrap calibrefx-metaboxes <?php echo $calibrefx_current_section; ?>">
-            <form method="<?php echo $this->_form_method; ?>" action="<?php echo $this->_submit_url; ?>" enctype="multipart/form-data" id="calibrefx-form">
-                <?php if ( 'post' == $this->_form_method ) : ?>
-                <?php wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false ); ?>
-                <?php wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false ); ?>
-                <?php settings_fields( $this->settings_field ); // important! ?>
-                <?php do_action( 'calibrefx_hidden_fields' ); ?>
-                <?php endif; ?>
+		<div id="<?php echo $this->settings_field; ?>-page" class="wrap calibrefx-metaboxes <?php echo $calibrefx_current_section; ?>">
+			<form method="<?php echo $this->_form_method; ?>" action="<?php echo $this->_submit_url; ?>" enctype="multipart/form-data" id="calibrefx-form">
+				<?php if ( 'post' == $this->_form_method ) : ?>
+				<?php wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false ); ?>
+				<?php wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false ); ?>
+				<?php settings_fields( $this->settings_field ); // important! ?>
+				<?php do_action( 'calibrefx_hidden_fields' ); ?>
+				<?php endif; ?>
 
-                <div class="calibrefx-header">
-                    <div class="calibrefx-option-logo">
-                        <a target="_blank" href="http://www.calibrefx.com" title="CalibreFx">&nbsp;</a>
-                    </div>
-                    <?php if ( 'post' == $this->_form_method ) : ?>
-                    <div class="calibrefx-submit-button">
-                        <div class="clear"></div>
-                        <button type="submit" class="calibrefx-h2-button calibrefx-settings-submit-button"><i class="fa fa-save fa-2"></i> <?php _e( 'Save Settings', 'calibrefx' ) ?></button>
-                        <button type="submit" class="calibrefx-h2-button calibrefx-settings-reset-button" name="<?php echo $this->settings_field; ?>[reset]" value="1" onclick="return calibrefx_confirm( '<?php echo esc_js( __( 'Are you sure you want to reset?', 'calibrefx' ) ); ?>' );"><i class="fa fa-refresh fa-2"></i><?php _e( 'Reset Settings', 'calibrefx' ); ?></button>
-                    </div>
-                    <?php endif; ?>
-                </div>
+				<div class="calibrefx-header">
+					<div class="calibrefx-option-logo">
+						<a target="_blank" href="http://www.calibrefx.com" title="CalibreFx">&nbsp;</a>
+					</div>
+					<?php if ( 'post' == $this->_form_method ) : ?>
+					<div class="calibrefx-submit-button">
+						<div class="clear"></div>
+						<button type="submit" class="calibrefx-h2-button calibrefx-settings-submit-button"><i class="fa fa-save fa-2"></i> <?php _e( 'Save Settings', 'calibrefx' ); ?></button>
+						<button type="submit" class="calibrefx-h2-button calibrefx-settings-reset-button" name="<?php echo $this->settings_field; ?>[reset]" value="1" onclick="return calibrefx_confirm( '<?php echo esc_js( __( 'Are you sure you want to reset?', 'calibrefx' ) ); ?>' );"><i class="fa fa-refresh fa-2"></i><?php _e( 'Reset Settings', 'calibrefx' ); ?></button>
+					</div>
+					<?php endif; ?>
+				</div>
 
 
-                <div class="calibrefx-content">
-                    
-                    <div class="metabox-holder">
-                        <div class="calibrefx-tab">
-                            <ul class="calibrefx-tab-option">
-                                <?php
+				<div class="calibrefx-content">
+
+										<div class="metabox-holder">
+						<div class="calibrefx-tab">
+							<ul class="calibrefx-tab-option">
+								<?php
 								foreach ( $calibrefx_sections as $section ) {
 									$current_class = ( $calibrefx_current_section === $section['slug'] ) ? ' class="current"' : '';
-									$section_link = admin_url( 'themes.php?page=' . $this->page_id . '&section=' . $section['slug'] );
+									$section_link  = admin_url( 'themes.php?page=' . $this->page_id . '&section=' . $section['slug'] );
 
 									$icon = $section['icon'];
 
-									echo "<li$current_class>
-                                            <a href='$section_link'>
-                                                <span class='calibrefx-section-link'><i class='$icon'></i>" . esc_attr( $section['title'] ) . "</span>
-												<!--span class='calibrefx-section-link-additional'></span-->
+									echo '<li ' . esc_attr( $current_class ) . '>
+                                            <a href=' . esc_url( $section_link ) . '>
+                                                <span class="calibrefx-section-link"><i class=' . esc_attr( $icon ) . '></i>' . esc_html( $section['title'] ) . '</span>
 											</a>
-										</li>";
+										</li>';
 								}
 								?>
-                            </ul>
-                            <div class="calibrefx-option">
-                                <h2><?php echo esc_attr( $calibrefx_sections[ $calibrefx_current_section ]['title'] ); ?></h2>
-                                <div class="postbox-container main-postbox calibrefx-<?php echo $calibrefx_current_section; ?>">
-                                    <?php
+							</ul>
+							<div class="calibrefx-option">
+								<h2><?php echo esc_attr( $calibrefx_sections[ $calibrefx_current_section ]['title'] ); ?></h2>
+								<div class="postbox-container main-postbox calibrefx-<?php echo esc_attr( $calibrefx_current_section ); ?>">
+									<?php
 									calibrefx_do_meta_sections( $calibrefx_current_section, $this->pagehook, 'main', null );
 									?>
-                                </div>
+								</div>
 
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <script type="text/javascript">
-            //<![CDATA[
-            jQuery(document).ready( function( $ ) {
-                // close postboxes that should be closed
-                $( '.if-js-closed' ).removeClass( 'if-js-closed' ).addClass( 'closed' );
-                // postboxes setup
-                postboxes.add_postbox_toggles( '<?php echo esc_attr( $this->pagehook ); ?>' );
-                            
-                postboxes._mark_area = function() {
-                    var visible = $( 'div.postbox:visible' ).length, side = $( '#post-body #side-sortables' );
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			//<![CDATA[
+			jQuery(document).ready( function( $ ) {
+				// close postboxes that should be closed
+				$( '.if-js-closed' ).removeClass( 'if-js-closed' ).addClass( 'closed' );
+				// postboxes setup
+				postboxes.add_postbox_toggles( '<?php echo esc_attr( $this->pagehook ); ?>' );
 
-                    $( '#<?php echo esc_attr( $this->pagehook ); ?> .meta-box-sortables:visible' ).each(function(n, el) {
-                        var t = $( this );
+					postboxes._mark_area = function() {
+					var visible = $( 'div.postbox:visible' ).length, side = $( '#post-body #side-sortables' );
 
-                        if ( visible == 1 || t.children( '.postbox:visible' ).length )
-                            t.removeClass( 'empty-container' );
-                        else
-                            t.addClass( 'empty-container' );
-                    });
+					$( '#<?php echo esc_attr( $this->pagehook ); ?> .meta-box-sortables:visible' ).each(function(n, el) {
+						var t = $( this );
 
-                    if ( side.length ) {
-                        if ( side.children( '.postbox:visible' ).length )
-                            side.removeClass( 'empty-container' );
-                        else if ( $( '#postbox-container-1' ).css( 'width' ) == '280px' )
-                            side.addClass( 'empty-container' );
-                    }
-                };
+						if ( visible == 1 || t.children( '.postbox:visible' ).length )
+							t.removeClass( 'empty-container' );
+						else
+							t.addClass( 'empty-container' );
+					});
 
-                postboxes._mark_area();
+					if ( side.length ) {
+						if ( side.children( '.postbox:visible' ).length )
+							side.removeClass( 'empty-container' );
+						else if ( $( '#postbox-container-1' ).css( 'width' ) == '280px' )
+							side.addClass( 'empty-container' );
+					}
+				};
 
-                $( '.calibrefx-ability a' ).click(function() {
-                    $(this).addClass( 'active' );
-                });
+				postboxes._mark_area();
+
+				$( '.calibrefx-ability a' ).click(function() {
+					$(this).addClass( 'active' );
+				});
 				
 				
 				setTimeout( function() { equalize_option_height() }, 400 );	
-            });
+			});
 			
 			equalize_option_height = function() {
 				var calibrefx_tab_option = jQuery( '.calibrefx-tab-option' ),
@@ -341,9 +341,8 @@ abstract class Calibrefx_Admin {
 					calibrefx_option.height( height );
 				}
 			}
-            //]]>
-        </script>
-        <?php
+			//]]>
+		</script>
+		<?php
 	}
-
 }
