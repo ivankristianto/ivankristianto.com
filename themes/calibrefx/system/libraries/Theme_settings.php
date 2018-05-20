@@ -171,7 +171,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 
 		calibrefx_add_meta_box( 'social', 'basic', 'calibrefx-theme-settings-socials', __( 'Social Integration', 'calibrefx' ), array( $this, 'socials_integrated_box' ), $this->pagehook, 'main' );
 
-		calibrefx_add_meta_box( 'system', 'basic', 'calibrefx-about-version', __( 'Information', 'calibrefx' ), array( $this, 'info_box' ), $this->pagehook, 'main', 'high' );
 		if( current_user_can( 'edit_theme_options' ) ){
 			calibrefx_add_meta_box( 'modules', 'basic', 'calibrefx-render-page', __( 'Modules Available', 'calibrefx' ), array( $this, 'render_page' ), $this->pagehook, 'main', 'high' );
 			calibrefx_add_meta_box( 'importexport', 'basic', 'calibrefx-import-settings', __( 'Import Settings', 'calibrefx' ), array( $this, 'import_settings' ), $this->pagehook, 'main', 'high' );
@@ -1100,28 +1099,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 					wp_safe_redirect( Calibrefx::admin_url( 'page=calibrefx&section=modules' ) );
 					exit;
 			}
-		}
-	}
-
-	public function info_box() { ?>
-        <p>
-            <span class="description">
-            Below is the CalibreFx Framework Informations. All the codes and informations is copyrighted by <a href="http://www.calibreworks.com" target="_blank">Calibreworks</a>.
-            CalibreFx is released under the GPL v2. For license information please refer to the license.txt in themes folder.
-            </span>
-        </p>
-        <p><strong><?php _e( 'Framework Name: ', 'calibrefx' ); ?></strong><?php echo FRAMEWORK_NAME; ?> (<?php _e( 'Codename: ', 'calibrefx' ); echo FRAMEWORK_CODENAME; ?>)</p>
-        <p><strong><?php _e( 'Version:', 'calibrefx' ); ?></strong> <?php echo FRAMEWORK_VERSION; ?> <?php echo '&middot;'; ?> <strong><?php _e( 'Released:', 'calibrefx' ); ?></strong> <?php echo FRAMEWORK_RELEASE_DATE; ?></p>
-        <p><strong><?php _e( 'DB Version: ', 'calibrefx' ); ?></strong><?php echo FRAMEWORK_DB_VERSION; ?></p>
-        <?php
-
-		if ( is_child_theme() ) { ?>
-            <hr class="div" />
-            <h4>Themes Information</h4>
-            <p><strong><?php _e( 'Themes Name: ', 'calibrefx' ); ?></strong><?php echo CHILD_THEME_NAME; ?> </p>
-            <p><strong><?php _e( 'Version:', 'calibrefx' ); ?></strong> <?php echo CHILD_THEME_VERSION; ?> </p>
-            <p><strong><?php _e( 'Themes Author URL:', 'calibrefx' ); ?></strong> <?php echo CHILD_THEME_URL; ?> </p>
-        <?php
 		}
 	}
 
