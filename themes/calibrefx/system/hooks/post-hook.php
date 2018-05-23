@@ -239,7 +239,7 @@ function calibrefx_do_post_image() {
 		
 		case 'full':
 		default:
-			$img = calibrefx_get_image( array( 'format' => 'html', 'size' => 'full', 'attr' => array( 'class' => 'alignnone post-image img-responsive' ) ) );
+			$img = calibrefx_get_image( array( 'format' => 'html', 'size' => 'large', 'attr' => array( 'class' => 'alignnone post-image img-responsive' ) ) );
 			break;
 	}
 
