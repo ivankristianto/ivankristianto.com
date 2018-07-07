@@ -1,9 +1,10 @@
 {
   "name": "10up/reinasofia",
+  "type": "wordpress-theme",
   "authors": [
     {
-      "name": "Ivan Kristianto",
-      "email": "ivan@ivankristianto.com"
+      "name": "Author",
+      "email": "email@10up.com"
     }
   ],
   "require": {

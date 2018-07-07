@@ -14,8 +14,8 @@ function setup() {
 		return __NAMESPACE__ . "\\$function";
 	};
 
-	add_action( 'after_setup_theme', $n( 'i18n' ) );
-	add_action( 'after_setup_theme', $n( 'theme_setup' ) );
+	add_action( 'after_setup_theme',  $n( 'i18n' ) );
+	add_action( 'after_setup_theme',  $n( 'theme_setup' ) );
 	add_action( 'wp_enqueue_scripts', $n( 'scripts' ) );
 	add_action( 'wp_enqueue_scripts', $n( 'styles' ) );
 }
@@ -42,15 +42,15 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support(
 		'html5', array(
-			'search-form',
-			'gallery',
+		'search-form',
+		'gallery'
 		)
 	);
 
 	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'reinasofia' ),
+			'primary'        => esc_html__( 'Primary Menu', 'tenup' ),
 		)
 	);
 }
@@ -64,7 +64,7 @@ function scripts() {
 
 	wp_enqueue_script(
 		'frontend',
-		REINASOFIA_TEMPLATE_URL . '/dist/js/frontend.min.js',
+		REINASOFIA_TEMPLATE_URL . "/dist/js/frontend.min.js",
 		[],
 		REINASOFIA_VERSION,
 		true
@@ -81,9 +81,8 @@ function styles() {
 
 	wp_enqueue_style(
 		'styles',
-		REINASOFIA_TEMPLATE_URL . '/dist/css/style.min.css',
+		REINASOFIA_TEMPLATE_URL . "/dist/css/style.min.css",
 		[],
 		REINASOFIA_VERSION
 	);
 }
-
