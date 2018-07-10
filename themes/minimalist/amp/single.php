@@ -16,6 +16,8 @@ $this->load_parts( array( 'html-start' ) );
 
 <?php $this->load_parts( array( 'header' ) ); ?>
 
+<?php do_action( 'ik_amp_after_body_open_tag' ); ?>
+
 <article class="amp-wp-article">
 	<header class="amp-wp-article-header">
 		<h1 class="amp-wp-title"><?php echo esc_html( $this->get( 'post_title' ) ); ?></h1>

@@ -88,6 +88,41 @@ function date_display( $content ) {
 
 function ik_amp_extended_component() {
 	echo '<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>';
-	echo '<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>>';
+	echo '<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>';
 }
 add_action( 'amp_post_template_head', 'ik_amp_extended_component', 25 );
+
+function ik_amp_google_analytic_element() {
+
+	$data = wp_json_encode(
+		[
+			'vars'     => [
+				'account' => 'UA-5721705-1'
+			],
+			'triggers' => [
+				'trackPageview' => [
+					'on'      => 'visible',
+					'request' => 'pageview',
+				],
+				'trackClick'    => [
+					'on'       => 'click',
+					'selector' => 'a',
+					'request'  => 'event',
+					'vars'     => [
+						'eventAction' => 'click',
+					]
+				],
+			],
+		]
+	);
+
+	echo <<< TAG
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  	$data
+  </script>
+</amp-analytics>
+TAG;
+
+}
+add_action( 'ik_amp_after_body_open_tag', 'ik_amp_google_analytic_element' );
