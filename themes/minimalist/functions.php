@@ -86,80 +86,8 @@ function date_display( $content ) {
 	return $content;
 }
 
-function force_comment( $content ) {
-	global $withcomments;
-	//$withcomments = true;
-
-	return $content;
+function ik_amp_extended_component() {
+	echo '<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>';
+	echo '<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>>';
 }
-
-
-/*add_shortcode( 'ck_related_articles', 'me_related_articles' );
-function me_related_articles( $atts ) {
-	$atts = shortcode_atts( array(
-		'title'        => '',
-		'show_image'   => '1',
-		'show_excerpt' => '1',
-		'count'        => '5',
-		'post_ids'     => '',
-	), $atts, 'ck_related_articles' );
-
-	global $post;
-
-	$post_type = get_post_type( $post );
-
-	$post_ids = explode( ',', $atts['post_ids'], absint( $atts['count'] ) );
-	$post_ids = array_filter( $post_ids, function ( $value ) {
-		return ( '' !== $value && 'null' !== $value );
-	} );
-	$post_ids = array_map( function ( $value ) {
-		//make sure the post id is integer
-		return absint( $value );
-	}, $post_ids );
-
-	//we don't want to show current post
-	$exclude_ids = array( $post->ID, $post_ids );
-
-	$related_post_ids = get_related_post_ids( $post, $atts['count'], $exclude_ids );
-	$post_ids         = array_merge( $post_ids, $related_post_ids );
-
-	$query_args = array(
-		'post_type'      => $post_type,
-		'posts_per_page' => absint( $atts['count'] ),
-		'post__in'       => $post_ids,
-		'post_status'    => array( 'publish' ),
-		'cache_results'  => true,
-		'orderby'        => 'post__in',
-	);
-	$query      = new \WP_Query( $query_args );
-
-	echo '<pre>';var_dump($query->posts);exit;
-}
-
-function get_related_post_ids( $post, $size = 5, $exclude_ids = array() ) {
-
-	$post_type = get_post_type( $post );
-
-	//First try to use Jetpack Related Post
-	if ( class_exists( '\Jetpack_RelatedPosts' ) && method_exists( '\Jetpack_RelatedPosts', 'init_raw' ) ) {
-		$jetpack_related_posts = \Jetpack_RelatedPosts::init_raw();
-
-		$categories = get_the_terms( $post, 'category' );
-		$tags       = get_the_terms( $post, 'post_tag' );
-
-		$args = array(
-			'size'             => (int) $size,
-			'post_type'        => $post_type,
-			'has_terms'        => array( $categories, $tags ),
-			'exclude_post_ids' => $exclude_ids,
-		);
-
-		$related_post_ids = $jetpack_related_posts->get_for_post_id( $post->ID, $args );
-		var_dump($related_post_ids);exit;
-		if ( $related_post_ids ) {
-			return wp_list_pluck($related_post_ids,'id');
-		}
-	}
-
-	return array();
-}*/
+add_action( 'amp_post_template_head', 'ik_amp_extended_component', 25 );
