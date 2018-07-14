@@ -26,14 +26,7 @@ $this->load_parts( array( 'html-start' ) );
 
 	<?php $this->load_parts( array( 'featured-image' ) ); ?>
 
-    <amp-ad width="100vw" height=320
-            type="adsense"
-            data-ad-client="ca-pub-5132818893953017"
-            data-ad-slot="9260635902"
-            data-auto-format="rspv"
-            data-full-width>
-        <div overflow></div>
-    </amp-ad>
+	<amp-auto-ads type="adsense" data-ad-client="ca-pub-5132818893953017"></amp-auto-ads>
 
 	<div class="amp-wp-article-content">
 		<?php echo $this->get( 'post_amp_content' ); // WPCS: XSS ok. Handled in AMP_Content::transform(). ?>
