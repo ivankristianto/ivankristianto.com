@@ -77,6 +77,14 @@ function date_display( $content ) {
 	return $content;
 }
 
+function disable_emojicons_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
+
 function disable_wp_emojicons() {
 
 	// all actions related to emojis
