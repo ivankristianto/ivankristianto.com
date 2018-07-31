@@ -16,12 +16,12 @@ function adsense_setting() {
 			calibrefx_add_meta_option(
 				'adsense-code-settings',  // group id
 				'adsense_before_image', // field id and option name
-				__( 'Adsense Code Before Feature Image', 'calibrefx' ), // Label
+				__( 'Google Ad Client ID', 'calibrefx' ), // Label
 				array(
-					'option_type'        => 'textarea',
+					'option_type'        => 'textinput',
 					'option_default'     => '',
-					'option_filter'      => 'no_filter',
-					'option_description' => __( '728x60 Before Feature Image', 'calibrefx' ),
+					'option_filter'      => 'no_html',
+					'option_description' => __( 'Google Auto Ads Script', 'calibrefx' ),
 				), // Settings config
 				5 //Priority
 			);

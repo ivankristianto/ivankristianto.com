@@ -150,7 +150,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			calibrefx_add_meta_section( 'modules', __( 'Available Modules', 'calibrefx' ), '', 50 );
-			calibrefx_add_meta_section( 'importexport', __( 'Import / Export Settings', 'calibrefx' ), '', 80, 'fa fa-share-square-o' );
 		}
 
 		do_action( 'calibrefx_theme_settings_meta_section' );
@@ -162,7 +161,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 	}
 
 	public function meta_boxes() {
-		calibrefx_add_meta_box( 'general', 'basic', 'calibrefx-theme-settings-brand', __( 'Brand Settings', 'calibrefx' ), array( $this, 'branding_box' ), $this->pagehook, 'main', 'high' );
 		calibrefx_add_meta_box( 'general', 'basic', 'calibrefx-theme-settings-navigation', __( 'Navigation Settings', 'calibrefx' ), array( $this, 'navigation_box' ), $this->pagehook, 'main', 'high' );
 		calibrefx_add_meta_box( 'general', 'basic', 'calibrefx-theme-settings-content', __( 'Content Setting', 'calibrefx' ), array( $this, 'content_setting' ), $this->pagehook, 'main' );
 		calibrefx_add_meta_box( 'general', 'basic', 'calibrefx-theme-settings-comment', __( 'Post Comment Setting', 'calibrefx' ), array( $this, 'comment_setting' ), $this->pagehook, 'main' );
@@ -175,8 +173,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			calibrefx_add_meta_box( 'modules', 'basic', 'calibrefx-render-page', __( 'Modules Available', 'calibrefx' ), array( $this, 'render_page' ), $this->pagehook, 'main', 'high' );
-			calibrefx_add_meta_box( 'importexport', 'basic', 'calibrefx-import-settings', __( 'Import Settings', 'calibrefx' ), array( $this, 'import_settings' ), $this->pagehook, 'main', 'high' );
-			calibrefx_add_meta_box( 'importexport', 'basic', 'calibrefx-export-settings', __( 'Export Settings', 'calibrefx' ), array( $this, 'export_settings' ), $this->pagehook, 'main', 'high' );
 		}
 
 		do_action( 'calibrefx_theme_settings_meta_box' );
@@ -194,42 +190,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 		<?php
 	}
 
-	//Meta Boxes Sections
-	function branding_box() {
-		global $calibrefx;
-
-		calibrefx_add_meta_group( 'themebranding-settings', 'branding-settings', __( 'Brand Settings', 'calibrefx' ) );
-
-		add_action(
-			'themebranding-settings_options', function() {
-				calibrefx_add_meta_option(
-					'branding-settings',  // group id
-					'header_logo_desc', // field id and option name
-					__( 'Set logo', 'calibrefx' ),
-					array(
-						'option_type'        => 'blank',
-						'option_description' => __( 'You can upload configure your logo using from the Appereance > Header.', 'calibrefx' ),
-					), // Settings config
-					1 //Priority
-				);
-
-				calibrefx_add_meta_option(
-					'branding-settings',  // group id
-					'favicon', // field id and option name
-					__( 'Set Favicon', 'calibrefx' ),
-					array(
-						'option_type'        => 'upload',
-						'option_default'     => '',
-						'option_filter'      => 'safe_url',
-						'option_description' => __( 'You can upload your favicon. Best size 32x32px in .ico format', 'calibrefx' ),
-					), // Settings config
-					5 //Priority
-				);
-			}
-		);
-
-		calibrefx_do_meta_options( $calibrefx->theme_settings, 'themebranding-settings' );
-	}
 	/**
 	 * Show navigation setting box
 	 */
@@ -1143,125 +1103,6 @@ class CFX_Theme_Settings extends Calibrefx_Admin {
 					exit;
 			}
 		}
-	}
-
-	public function import_settings() {
-	?>
-		<p><?php _e( 'Upload the data file (<code>.json</code>) from your computer and we\'ll import your settings.', 'calibrefx' ); ?></p>
-		<p><?php _e( 'Choose the file from your computer and click "Upload file and Import"', 'calibrefx' ); ?></p>
-		<p>
-			<input type="hidden" name="calibrefx-import" value="1" />
-			<label for="calibrefx-import-upload"><?php sprintf( __( 'Upload File: (Maximum Size: %s)', 'calibrefx' ), ini_get( 'post_max_size' ) ); ?></label>
-			<input type="file" id="calibrefx-import-upload" name="calibrefx-import-upload" size="25" />
-			<!-- <input type="hidden" name="calibrefx_do_import" value="1" /> -->
-			<br/><br/>
-			<input type="submit" name="calibrefx_do_import" class="button-primary calibrefx-h2-button" value="<?php _e( 'Import Settings', 'calibrefx' ); ?>" />
-		</p>
-	<?php
-	}
-
-	public function export_settings() {
-	?>
-		<p><span class="description"><?php _e( 'Press the download button below to export all the settings to file', 'calibrefx' ); ?></span></p>
-		<p>
-			<input type="submit" name="calibrefx_do_export" class="button-primary calibrefx-h2-button" value="<?php _e( 'Export Settings', 'calibrefx' ); ?>" />
-		</p>
-
-	<?php
-	}
-
-	protected function get_export_options() {
-		global $calibrefx;
-
-		$options = array(
-			'theme_settings' => array(
-				'label'          => __( 'Theme Settings', 'calibrefx' ),
-				'settings-field' => 'calibrefx-settings',
-			),
-		);
-
-		return (array) apply_filters( 'calibrefx_export_options', $options );
-
-	}
-
-	public function do_export() {
-
-		$options = $this->get_export_options();
-
-		$settings = array();
-
-		foreach ( $options as $option ) {
-			/** Grab settings field name (key) */
-			$settings_field = $option['settings-field'];
-
-			/** Grab all of the settings from the database under that key */
-			$settings[ $settings_field ] = get_option( $settings_field );
-		}
-
-		/** Check there's something to export */
-		if ( empty( $settings ) ) {
-			return;
-		}
-
-		$output = json_encode( (array) $settings );
-
-		/** Prepare and send the export file to the browser */
-		header( 'Content-Description: File Transfer' );
-		header( 'Cache-Control: public, must-revalidate' );
-		header( 'Pragma: hack' );
-		header( 'Content-Type: text/plain' );
-		header( 'Content-Disposition: attachment; filename="calibrefx-' . date( 'Ymd-His' ) . '.json"' );
-		header( 'Content-Length: ' . strlen( $output ) );
-		echo $output;
-		exit;
-	}
-
-	public function do_import() {
-
-		$url       = wp_nonce_url( admin_url( 'admin.php?page=calibrefx-other&section=importexport' ), 'calibrefx-import' );
-		$tools_url = admin_url( 'admin.php?page=calibrefx-other&section=importexport' );
-
-		if ( ! isset( $_REQUEST['_wpnonce'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'debug_action' ) ) {
-			wp_redirect( $tools_url );
-			exit;
-		}
-
-		if ( false === ( $creds = request_filesystem_credentials( $url, '', false, false, null ) ) ) {
-			wp_redirect( $tools_url );
-			exit;
-		}
-
-		if ( ! WP_Filesystem( $creds ) ) {
-			request_filesystem_credentials( $url, '', true, false, null );
-
-			wp_redirect( $tools_url );
-			exit;
-		}
-
-		global $wp_filesystem;
-
-		/** Extract file contents */
-		$upload = $wp_filesystem->get_contents( $_FILES['calibrefx-import-upload']['tmp_name'] );
-
-		/** Decode the JSON */
-		$options = json_decode( $upload, true );
-
-		/** Check for errors */
-		if ( ! $options || $_FILES['calibrefx-import-upload']['error'] ) {
-			$redir_url = admin_url( 'admin.php?page=' . $this->page_id . '&section=importexport&error=true' );
-			wp_redirect( esc_url_raw( $redir_url ) );
-			exit;
-		}
-
-		/** Cycle through data, import settings */
-		foreach ( (array) $options as $key => $settings ) {
-			update_option( $key, $settings );
-		}
-
-		/** Redirect, add success flag to the URI */
-		$redir_url = admin_url( 'admin.php?page=' . $this->page_id . '&section=importexport&import=true' );
-		wp_redirect( esc_url_raw( $redir_url ) );
-		exit;
 	}
 }
 
