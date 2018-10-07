@@ -2,7 +2,7 @@
 
 define( 'CHILD_THEME_NAME', 'minimalist' );
 define( 'CHILD_THEME_URL', 'https://www.ivankristianto.com' );
-define( 'CHILD_THEME_VERSION', '1.2.0' );
+define( 'CHILD_THEME_VERSION', '1.2.1' );
 define( 'CHILD_THEME_DB_VERSION', '1' );
 define( 'CHILD_APP_DIR', 'app' );
 
