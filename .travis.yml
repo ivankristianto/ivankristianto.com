@@ -6,6 +6,9 @@ branches:
 php:
   - '7.1'
 
+addons:
+  ssh_known_hosts: ssh.ivankristianto.com
+
 script:
   - echo 'Deploy!!'
 
