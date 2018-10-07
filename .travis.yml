@@ -16,6 +16,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ $ssh_username@$ssh_host:$full_path
+  script: rsync -r --delete-after --quiet --exclude=plugins $TRAVIS_BUILD_DIR/ $ssh_username@$ssh_host:$full_path
   on:
     branch: master
