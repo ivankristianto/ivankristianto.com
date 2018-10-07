@@ -6,9 +6,6 @@ branches:
 php:
   - '7.1'
 
-addons:
-  ssh_known_hosts: $ssh_host
-
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_526abde80c1d_key -iv $encrypted_526abde80c1d_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
   - eval "$(ssh-agent -s)"
