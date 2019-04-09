@@ -6,9 +6,9 @@
  *
  * @package		CalibreFx
  * @author		CalibreFx Team
- * @copyright   Copyright (c) 2012-2015, Calibreworks. (http://www.calibreworks.com/)
+ * @copyright   Copyright (c) 2019, Ivan Kristianto. (https://www.ivankristianto.com/)
  * @license		GNU/GPL v2
- * @link		http://www.calibrefx.com
+ * @link		https://www.ivankristianto.com
  *
  * The WordPress functions.php file. initialize CalibreFx framework and themes.
  *
@@ -100,19 +100,21 @@ add_action( 'after_setup_theme', 'calibrefx_initializing', 0 );
 
 function calibrefx_initialize_other() {
 	if( is_woocommerce_activated() ) {
-		// Support for Woocoomerce
+		// Support for WooCoomerce
 		add_theme_support( 'woocommerce' );
 
-		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 	}
 
 }
 add_action( 'after_setup_theme', 'calibrefx_initialize_other', 99 );
 
 /**
- * Load extension: helpers, hooks, widgets, and shortcodes
- * @param  string $type: helpers, hooks, widgets, and shortcodes
- * @param  array $hooks_include
+ * Load extension: helpers, hooks, widgets, and shortcodes.
+ *
+ * @param  array  $files_included
+ * @param  string $type helpers, hooks, widgets, and shortcodes
+ *
  * @return array
  */
 function childfx_load_extension( $files_included, $type ){
@@ -129,7 +131,8 @@ function childfx_load_extension( $files_included, $type ){
 }
 
 /**
- * Load library from child themes
+ * Load library from child themes.
+ *
  * @param  array $library_path
  * @return array
  */

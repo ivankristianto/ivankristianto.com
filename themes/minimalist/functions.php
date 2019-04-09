@@ -85,6 +85,9 @@ function disable_emojicons_tinymce( $plugins ) {
 	}
 }
 
+/**
+ * Disable WP Emoji
+ */
 function disable_wp_emojicons() {
 
 	// all actions related to emojis
