@@ -60,7 +60,7 @@
     "require-dir": "^0.3.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^2.1.5",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^7.0.0"
   },
   "engineStrict": true,
   "engines": {
